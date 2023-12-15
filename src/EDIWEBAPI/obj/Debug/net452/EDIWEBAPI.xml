@@ -1,0 +1,2733 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EDIWEBAPI</name>
+    </assembly>
+    <members>
+        <member name="M:EDIWEBAPI.Controllers.License.LicenseConfigController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.License.LicenseConfigController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.License.LicenseConfigController.ExecucteLicenseData(System.Int32)">
+            <summary>
+            Дэлгүүрийн лицензийн тооцоолол бодуулах
+            </summary>
+            <param name="storeid">Дэлгүүрийн ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.License.LicenseConfigController.GetMenusByOrganizationType(System.Int32)">
+            <summary>
+            Тухайн role дээрх хандах цэсийн жагсаалт roleId-р шүүж авчрах API    
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Давхарбаяр
+            Үүсгэсэн огноо : 2018.05-25 
+            <param name = "type" > STORE - 2, BUSINESS - 1, SYSTEM - 3 </param>
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">STORE - 2, BUSINESS - 1, SYSTEM - 3</response>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.License.LicenseConfigController.GetRoleListByModuleType(System.Int32)">
+            <summary>
+            #Тухайн модульд хамаарах роль буюу багцуудыг буцаана
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-05-25
+            </remarks>
+            <param name="moduletype">Модуль төрөл</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.License.LicenseConfigController.GetMenusByRoleId(System.Int32)">
+            <summary>
+            Тухайн role дээрх хандах цэсийн жагсаалт roleId-р шүүж авчрах API 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-05-25 
+            Зассан огноо : 
+            </remarks>
+            <param name = "roleid" > Roleid </param >
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.License.LicenseConfigController.GetRoleConfigByRoleID(System.Int32)">
+            <summary>
+            #Тухайн ROLE-д хамаарах үнийн тохиргоог татаж байгаа функц
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-05-25
+            </remarks>
+            <param name="roleid"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.License.LicenseConfigController.UpdateRole(EDIWEBAPI.Entities.DBModel.SystemManagement.SYSTEM_ROLES)">
+            <summary>
+            #SYSTEM_MENU_ROLE ХҮСНЭГТИЙН put
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-05-30
+            </remarks>
+            <param name="item"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.License.LicenseController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.License.LicenseController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.License.LicenseController.UpdateLicense(EDIWEBAPI.Entities.License.BankStatement)">
+            <summary>
+            
+            </summary>
+            <param name="statementdata">Банк статемент сонсдог хэсэг</param>
+            <returns></returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.LoginController.ForgotPassword(System.String)">
+            <summary>
+            #Нууц үгээ мартсан
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="email"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterData.SystemRolesController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.MasterData.SystemRolesController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterData.SystemRolesController.Get(System.Int32)">
+            <summary>
+            Өнгө
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.MasterSku.MasterSkuController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetDepartmentInfo(System.Int32)">
+            <summary>
+            Брэнд
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetBrand(System.Int32)">
+            <summary>
+            Брэнд
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.Post(System.Collections.Generic.List{EDIWEBAPI.Entities.DBModel.MasterSku.MST_ORIGIN})">
+            <summary>
+            #Гарал үүсэл
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-10-24
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.Put(EDIWEBAPI.Entities.DBModel.MasterSku.MST_ORIGIN)">
+            <summary>
+            Гарал үүслийн бүртгэл
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="item"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetOrigin(System.Int32)">
+            <summary>
+            Улсын бүртгэл
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetOriginList">
+            <summary>
+            Гарал үүсэл жагсаалт
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-10-24
+            Зассан огноо : 
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetOUMList">
+            <summary>
+            #Хэмжих нэгж
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            <author>Pieter Muller</author>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetOUM(System.Int32)">
+            <summary>
+            Нэгжийн бүртгэл
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="item"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.UOMPost(System.Collections.Generic.List{EDIWEBAPI.Entities.DBModel.MasterSku.MST_UOM})">
+            <summary>
+            Нэгжийн мэдээлэл бүртгэх
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="item"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetByID(System.Int32)">
+            <summary>
+            Барааны жагсаалт
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.Get">
+            <summary>
+            Барааны жагсаалт
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.Post(System.Collections.Generic.List{EDIWEBAPI.Entities.DBModel.MasterSku.MST_SKU})">
+            <summary>
+            Барааны бүртгэл
+            </summary>
+            <remarks>
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-10-24
+            </remarks>
+            <param name="item"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.Put(EDIWEBAPI.Entities.DBModel.MasterSku.MST_SKU)">
+            <summary>
+            Барааны мэдээлэл засах
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            <author>Pieter Muller</author>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.Post(System.Collections.Generic.List{EDIWEBAPI.Entities.DBModel.MasterSku.MST_SKU_IMAGES})">
+            <summary>
+            #Барааны зураг хадгалах 
+            SKUID - барааны ID
+            IMAGEURL - зурагны хаяг
+            LETTERIMAGE - Шинжилгээнийн бичиг эсэх
+            INDEXID - Эрэмбэ
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="барааны зурагзураг"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.Put(EDIWEBAPI.Entities.DBModel.MasterSku.MST_SKU_IMAGES)">
+            <summary>
+            #Зурагийн мэдээлэл засах
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="param"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.ChangeBalance(System.Int32,System.Int32)">
+            <summary>
+            #Барааны нөөц өөрчлөх функц 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-02
+            </remarks>
+            <param name="skuid">Барааны ID</param>
+            <param name="balance">Барааны нөөц /1, 0/</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.ChangeStatus(System.Int32,System.Int32)">
+            <summary>
+            #Барааны төлөв өөрчлөх функц 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-02
+            </remarks>
+            <param name="skuid">Барааны ID</param>
+            <param name="status">Барааны төлөв /1, 0/</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetDepartment(System.Int32)">
+            <summary>
+            #Department
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetClasses(System.String)">
+            <summary>
+            #Class
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.MasterSku.MasterSkuController.GetSubClasses(System.String)">
+            <summary>
+            #SubClass
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SendData.MailSendController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SendData.MailSendController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SendData.SendDataController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SendData.SendDataController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.BuyingController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.BuyingController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.BuyingController.GetBuyingHeader(System.String,System.DateTime,System.DateTime,System.Int32,System.String)">
+            <summary>
+            #Татан авалтын мэдээлэл
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-03-07
+            </remarks>
+            <param name="contractno">Гэрээ №</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="buyingstatus">Buying status 1 = buying, 0 = Буцаалт, null = Бүгд </param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.BuyingStoreController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.BuyingStoreController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.BuyingStoreController.GetBuyingHeader(System.String,System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            #Татан авалтын мэдээлэл
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-03-07
+            </remarks>
+            <param name="contractno">Гэрээ № </param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="regno">Байгууллагын регистр</param>
+            <param name="buyingstatus">Buying status 1 = buying, 0 = Буцаалт, null = Бүгд </param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.BuyingSystemController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.BuyingSystemController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.BuyingSystemController.GetBuyingHeader(System.String,System.DateTime,System.DateTime,System.String,System.Int32,System.String)">
+            <summary>
+            #Татан авалтын мэдээлэл
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-03-07
+            </remarks>
+            <param name="contractno">Гэрээ №</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="regno">Байгууллагын регистр</param>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="buyingstatus">Buying status 1 = buying, 0 = Буцаалт, null = Бүгд </param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.FeedbackController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.FeedbackController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.MasterDataController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.MasterDataController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.OrderController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderController.GetOrderHeader(System.String,System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            #Захиалгын хураангуй
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-01-16
+            </remarks>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="skucd">Бар код</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderController.GetOrderDetail(System.String,System.String,System.String)">
+            <summary>
+            #Захиалгын дэлгэрэнгүй
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-01-16
+            </remarks>
+            <param name="branchcode">Салбарын код</param>
+            <param name="orderdate">Захиалгын огноо</param>
+            <param name="orderno">Захиалгын дугаар</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderController.GetOrderDetail(System.Collections.Generic.List{EDIWEBAPI.Entities.RequestModels.OrderDetailRequest})">
+            <summary>
+            #Захиалгын дэлгэрэнгүй
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-01-16
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderStoreController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.OrderStoreController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderStoreController.GetOrderHeader(System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            #Захиалгын хураангуй /Дэлгүүр/
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-01-16
+            </remarks>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="skucd">Бар код</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderStoreController.GetOrderDetail(System.String,System.String,System.String)">
+            <summary>
+            #Захиалгын дэлгэрэнгүй /Дэлгүүр/ 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-01-16
+            </remarks>
+            <param name="comid">Дэлгүүрийн ID</param>
+            <param name="branchcode">Салбарын код</param>
+            <param name="orderdate">Захиалгын огноо</param>
+            <param name="orderno">Захиалгын дугаар</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderSystemController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.OrderSystemController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderSystemController.GetOrderHeader(System.Int32,System.String,System.String,System.DateTime,System.String,System.Int32)">
+            <summary>
+            #Захиалгын хураангуй /Дэлгүүр/
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-01-16
+            </remarks>
+            <param name="comid">Дэлгүүрийн ID</param>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="skucd">Бар код</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderSystemController.GetOrderDetail(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            #Захиалгын дэлгэрэнгүй /Дэлгүүр/ 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-01-16
+            </remarks>
+            <param name="comid">Дэлгүүрийн ID</param>
+            <param name="branchcode">Салбарын код</param>
+            <param name="orderdate">Захиалгын огноо</param>
+            <param name="orderno">Захиалгын дугаар</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderSystemController.GetReturnOrderHeader(System.Int32,System.String,System.String,System.DateTime,System.DateTime,System.String,System.Int32)">
+            <summary>
+            #Бизнес талаас Буцаалтын үндсэн хэсэн
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="comid">Дэлгүүр №</param>
+            <param name="branchcode">Салбар №</param>
+            <param name="contractno">Гэрээ №</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="skucd">Баркод</param>
+            <param name="businessid">Байгууллага ID</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.OrderSystemController.GetReturnOrderDetail(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            #Систем талаас буцаалтын задаргаа
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="comid">Дэлгүүр№</param>
+            <param name="branchcode">Салбар №</param>
+            <param name="orderdate">Захиалгын огноо</param>
+            <param name="orderno">Захиалгын №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.PaymentController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.Get(System.Int32,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            #Төлбөр тооцооны үндсэн хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-14
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="contractno">Гэрээний дугаар</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Амжилттай</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.GetData(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            #Төлбөр тооцооны үндсэн хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-14
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="year">Жил</param>
+            <param name="month">Сар</param>
+            <param name="contractno">Гэрээний дугаар</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.GetLicenseDetail(System.Int32,System.DateTime)">
+            <summary>
+            ӨРТӨӨГИЙН ТӨЛБӨР
+            </summary>
+            <remarks>
+            Тайлбар
+            Үүсгэсэн огноо : 2017-11-14
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="licdate">Огноо</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Амжилттай</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.GetAmdDetail(System.Int32,System.DateTime,System.DateTime,System.String,System.Int32)">
+            <summary>
+            #Бараа материалын үнэ
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-14
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="regno">Нэвтэрсэн байгууллагын регистер</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <param name="pbgb">payment төрөл</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.GetPenAmtDetail(System.Int32,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            Торгуулийн дэлгэрэнгүй /Direct special commision хамтдаа ашиглана.../
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="comid">Дэлгүүр</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.GetFrbtAmtDetail(System.Int32,System.DateTime,System.String)">
+            <summary>
+            #Гэрээний нэмэлт дүн /Direct, Special, Commission дундаа ашиглана/
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="comid">Дэлгүүр</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.GetIfrbtAmtDetail(System.Int32,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            #Үйл ажиллагааны нэмэлт дүн /direct, special, commision дундаа ашиглана/
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="comid">Дэлгүүр</param>
+            <param name="sdate">Эхлэх огноо</param> 
+            <param name="edate">Дуусах огноо</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.GetNormalStockDetail(System.Int32,System.DateTime,System.String)">
+            <summary>
+            #Нормаль сток
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-06
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="edate">Дуусах огноо цикль</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.GetPromotionDetail(System.Int32,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            #Нормаль сток
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-06
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <param name="sdate">Эхлэх огноо цикль</param>
+            <param name="edate">Дуусах огноо цикль</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.Post(System.Collections.Generic.List{EDIWEBAPI.Entities.DBModel.Payment.REQ_PAYMENT})">
+            <summary>
+            #НЭХЭМЖЛЭХ БАТАЛГААЖУУЛАХ
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-30
+            </remarks>
+            <param name="param">List REQ_PAYMENT </param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.Delete(EDIWEBAPI.Entities.CustomModels.PaymentDeleteModel)">
+            <summary>
+            #Төлбөр тооцоог цуцлах
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="contractno">Гэрээний</param>
+            <param name="stpymd">Дуусах огноо</param>
+            <param name="reason">Шалтгаан</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentController.PostAttach(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            #Нэхэмжлэл батлах 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="param">REQ_PAYMENT</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentReportController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.PaymentReportController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentReportController.GetPaymentReport(System.String,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            #Санхүүгийн актын жагсаалт
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-02-21
+            </remarks>
+            <param name="storeid">Дэлгүүрийн id</param>
+            <param name="regno">Байлгуулагын регистр</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentReportController.GetReportHeader(System.DateTime,System.DateTime,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sdate"></param>
+            <param name="edate"></param>
+            <param name="regno"></param>
+            <param name="comid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentReportController.PrintStatusChange(System.Int32)">
+            <summary>
+            #Дэлгүүрийн хэрэглэгч нэмэхжлэлийг хэвлэх үед энэ төлвийг өөрчлөх ёстой! 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-03-05
+            </remarks>
+            <param name="contractno">Гэрээ №</param>
+            <param name="stpymd">stpymd /20180101/</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentStoreController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.PaymentStoreController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentStoreController.Get(System.String,System.DateTime,System.DateTime,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            #Төлбөр тооцооны үндсэн хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-14
+            </remarks>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="regno">Нэвтэрсэн байгууллагын регистер</param>
+            <param name="contractno">Гэрээ</param>
+            <param name="approved">Батлагдсан эсэх</param>
+            <param name="attached">Нэхэмжлэгдсэн эсэх</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentStoreController.PrintStatusChange(System.String,System.String)">
+            <summary>
+            #Дэлгүүрийн хэрэглэгч нэмэхжлэлийг хэвлэх үед энэ төлвийг өөрчлөх ёстой! 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-03-05
+            </remarks>
+            <param name="contractno">Гэрээ №</param>
+            <param name="stpymd">stpymd /20180101/</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentStoreController.GetAmdDetail(System.String,System.DateTime,System.DateTime,System.String,System.Int32)">
+            <summary>
+            #Бараа материалын үнэ
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-14
+            </remarks>
+            <param name="regno">Рег №</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="regno">Нэвтэрсэн байгууллагын регистер</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <param name="pbgb">payment төрөл</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentStoreController.GetPenAmtDetail(System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            Торгуулийн дэлгэрэнгүй /Direct special commision хамтдаа ашиглана.../
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="regno">Рег №</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentStoreController.GetFrbtAmtDetail(System.DateTime,System.String)">
+            <summary>
+            #Гэрээний нэмэлт дүн /Direct, Special, Commission дундаа ашиглана/
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="edate">Дуусах огноо</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentStoreController.GetIfrbtAmtDetail(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            #Үйл ажиллагааны нэмэлт дүн /direct, special, commision дундаа ашиглана/
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="sdate">Дуусах огноо</param> 
+            <param name="edate">Дуусах огноо</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentStoreController.GetNormalStockDetail(System.DateTime,System.String)">
+            <summary>
+            #Нормаль сток
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-06
+            </remarks>
+            <param name="edate">Дуусах огноо цикль</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentStoreController.GetPromotionDetail(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            #Нормаль сток
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-06
+            </remarks>
+            <param name="ctrcd">Гэрээ №</param>
+            <param name="sdate">Эхлэх огноо цикль</param>
+            <param name="edate">Дуусах огноо цикль</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentSystemController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.PaymentSystemController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentSystemController.Get(System.Int32,System.String,System.DateTime,System.DateTime,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            #Төлбөр тооцооны үндсэн хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-14
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="regno">RegNo</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="contractno">Гэрээ</param>
+            <param name="approved">Батлагдсан эсэх</param>
+            <param name="attached">Нэхэмжлэгдсэн эсэх</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentSystemController.GetAmdDetail(System.Int32,System.String,System.DateTime,System.DateTime,System.String,System.Int32)">
+            <summary>
+            #Бараа материалын үнэ
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-14
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="regno">regNo</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <param name="pbgb">payment төрөл</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentSystemController.GetPenAmtDetail(System.Int32,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            Торгуулийн дэлгэрэнгүй /Direct special commision хамтдаа ашиглана.../
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="comid">Дэлгүүр</param>
+            <param name="sdate">Эхлэх огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentSystemController.GetFrbtAmtDetail(System.Int32,System.DateTime,System.String)">
+            <summary>
+            #Гэрээний нэмэлт дүн /Direct, Special, Commission дундаа ашиглана/
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="comid">Дэлгүүр</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentSystemController.GetIfrbtAmtDetail(System.Int32,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            #Үйл ажиллагааны нэмэлт дүн /direct, special, commision дундаа ашиглана/
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-01
+            </remarks>
+            <param name="comid">Дэлгүүр</param>
+            <param name="sdate">Дуусах огноо</param>
+            <param name="edate">Дуусах огноо</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentSystemController.GetNormalStockDetail(System.Int32,System.DateTime,System.String)">
+            <summary>
+            #Нормаль сток
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-06
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="edate">Дуусах огноо цикль</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.PaymentSystemController.GetPromotionDetail(System.Int32,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            #Нормаль сток
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-06
+            </remarks>
+            <param name="comid">Дэлгүүр ID</param>
+            <param name="ctrcd">Гэрээ №</param>
+            <param name="sdate">Эхлэх огноо цикль</param>
+            <param name="edate">Дуусах огноо цикль</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.ProductController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.ProductController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.ReportController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.ReportController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.ReportController.GetEventData(System.String,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            УРАМШУУЛЛЫН ТАЙЛАН
+            </summary>
+            <remarks>
+            Тайлбар
+            Үүсгэсэн огноо : 2018-02-22
+            </remarks>
+            <param name="contractno">Гэрээний №</param>
+            <param name="beginDate">Эхлэх огноо</param>
+            <param name="endDate">Дуусах огноо</param>
+            <param name="type">1 = ДЭЛГЭРЭНГҮЙ, 2 = БАРААГААР, 3 = САЛБАРААР</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.ReportStoreController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.ReportStoreController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.ReportStoreController.GetEventData(System.String,System.String,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            УРАМШУУЛЛЫН ТАЙЛАН
+            </summary>
+            <remarks>
+            Тайлбар
+            Үүсгэсэн огноо : 2018-02-22
+            </remarks>
+            <param name="regno">Регистер №</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="beginDate">Эхлэх огноо</param>
+            <param name="endDate">Дуусах огноо</param>
+            <param name="type">1 = ДЭЛГЭРЭНГҮЙ, 2 = БАРААГААР, 3 = САЛБАРААР</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.SaleController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleController.GetSaleSku(System.Int32,System.String,System.String,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            Борлуулалтын мэдээллийг харуулж буй хэсэг
+            </summary>
+            <param name="comid">Дэлгүүр №</param>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="beginDate">Эхлэх огноо</param>
+            <param name="endDate">Дуусах огноо</param>
+            <param name="type">1 = ДЭЛГЭРЭНГҮЙ, 2 = БАРААГААР, 3 = САЛБАРААР</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleController.GetSaleTime(System.Int32,System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Бизнесийн хэрэглэгчид цагийн борлуулалтын мэдээллийг харуулж буй хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-02-22
+            </remarks>
+            <param name="comid">Дэлгүүр №</param>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="beginDate">Эхлэх огноо</param>
+            <param name="endDate">Дуусах огноо</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleStoreController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.SaleStoreController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleStoreController.GetSaleSku(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            Дэлгүүрийн хэрэглэгчид нийт борлуулалтын мэдээллийг харуулж буй хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Үүсгэсэн огноо : 2018-02-22
+            </remarks>
+            <param name="branchcode">Салбарын код</param>
+            <param name="regno">Регистер №</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="beginDate">Эхлэх огноо</param>
+            <param name="endDate">Дуусах огноо</param>
+            <param name="type">1 = ДЭЛГЭРЭНГҮЙ, 2 = БАРААГААР, 3 = САЛБАРААР</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleStoreController.GetSaleTime(System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Дэлгүүрийн хэрэглэгчид цагийн борлуулалтын мэдээллийг харуулж буй хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Үүсгэсэн огноо : 2018-02-22
+            </remarks>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="beginDate">Эхлэх огноо</param>
+            <param name="endDate">Дуусах огноо</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleSystemController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.SaleSystemController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleSystemController.GetSaleBranch(System.Int32,System.String,System.String,System.DateTime)">
+            <summary>
+            Системийн хэрэглэгчид салбарын борлуулалтын мэдээллийг харуулж буй хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-02-22
+            </remarks>
+            <param name="comid">Дэлгүүр №</param>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="saledate">Огноо</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleSystemController.GetSaleSku(System.Int32,System.String,System.String,System.DateTime)">
+            <summary>
+            Системийн хэрэглэгчид Барааны борлуулалтын мэдээллийг харуулж буй хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-02-22
+            </remarks>
+            <param name="comid">Дэлгүүр №</param>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="saledate">Огноо</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleSystemController.GetSaleTot(System.Int32,System.String,System.String,System.DateTime)">
+            <summary>
+            Системийн хэрэглэгчид нийт борлуулалтын мэдээллийг харуулж буй хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-02-22
+            </remarks>
+            <param name="comid">Дэлгүүр №</param>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="saledate">Огноо</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.SaleSystemController.GetSaleTime(System.Int32,System.String,System.String,System.DateTime)">
+            <summary>
+            Системийн хэрэглэгчид цагийн борлуулалтын мэдээллийг харуулж буй хэсэг
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-02-22
+            </remarks>
+            <param name="comid">Дэлгүүр №</param>
+            <param name="branchcode">Салбарын код</param>
+            <param name="contractno">Гэрээний №</param>
+            <param name="saledate">Огноо</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.Storeapi.TestController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.Storeapi.TestController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.AccountController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.AccountController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.CompanyController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.Get(System.Int32)">
+            <summary>
+            Компанийн мэдээлэл
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetCompanyInfo(System.String)">
+            <summary>
+            #Компанийн мэдээллийг регистрээр шүүх
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-12-21
+            </remarks>
+            <param name="regno">Рег №</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetHeadCompanyList">
+            <summary>
+            Компанийн жагсаалт идэвхитэй
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetCompanyListWithFilter(EDIWEBAPI.Entities.FilterViews.OrganizationFilterView)">
+            <summary>
+            Байгууллагын жагсаалт шүүлтүүртэй хуудаслалтай 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2017.12.18 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetAllDisabledCompanyList">
+            <summary>
+            Идэвхигүй компанийн жагсаалт 
+            </summary>
+            <remarks>
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.Post(EDIWEBAPI.Entities.DBModel.SystemManagement.SYSTEM_ORGANIZATION)">
+            <summary>
+            Компанийн мэдээлэл хадгалах 
+            </summary>
+            <remarks>
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 
+            Зассан огноо : 
+            </remarks>
+            <param name="param">компанийн мэдээлэл лист жсон </param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.Put(EDIWEBAPI.Entities.DBModel.SystemManagement.SYSTEM_ORGANIZATION)">
+            <summary>
+            Компанийн мэдээлэл засах
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 
+            Зассан огноо : 
+            </remarks>
+            <param name="param">company json</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.DisableCompany(System.Int32)">
+            <summary>
+            Компанийн мэдээллийг идэвхигүй болгох
+            </summary>
+            <remarks>
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 
+            Зассан огноо : 
+            </remarks>
+            <param name="id">компанийн ID</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.EnableCompany(System.Int32)">
+            <summary>
+            Компанийн мэдээллийг сэргээх
+            </summary>
+            <remarks>
+            Програмист : 
+            Үүсгэсэн огноо : 
+            Зассан огноо : 
+            </remarks>
+            <param name="id">компанийн ID</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.Post(System.Collections.Generic.List{EDIWEBAPI.Entities.DBModel.SystemManagement.SYSTEM_BRANCH})">
+            <summary>
+            #Салбарын бүртгэл
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-03
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetStoreVendorList(EDIWEBAPI.Entities.FilterViews.VendorFilterView)">
+            <summary>
+            #Харилцагчдын жагсаалт хайлын хэсэгтэй
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-23
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetCompanyVendorList(EDIWEBAPI.Entities.FilterViews.VendorFilterView,System.Int32)">
+            <summary>
+            #Харилцагчдын жагсаалт хайлын хэсэгтэй
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-23
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetPaymentVendor">
+            <summary>
+            #Байгууллагын харилцагчдыг гэрээний хамт буцаана
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-23
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetCompanyRole(System.Int32)">
+            <summary>
+            #Тайлбар
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-24
+            </remarks>
+            <param name="comid">Компанийн ID</param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.Post(System.Collections.Generic.List{EDIWEBAPI.Entities.DBModel.SystemManagement.MST_CONTRACT_USERS})">
+            <summary>
+            #Хэрэглэгчийн гэрээний эрх  бүртгэх
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-24
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.Contracts">
+            <summary>
+            #Гэрээний жагасаалт
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-24
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetStorelist">
+            <summary>
+            #Дэлгүүрийн жагсаалт 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <returns>Дэлгүүрийн жагсаалт</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetBusinesslist">
+            <summary>
+            #Бизнесийн байгууллагын жагсаалт
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="item"></param>
+            <returns>Байгууллага </returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.CompanyController.GetStoreOrderMobileList">
+            <summary>
+            #fgdgfd
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.ContractController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.ContractController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.DashboardBusinessController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.DashboardBusinessController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.DashboardController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.DashboardController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.DashboardStoreController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.DashboardStoreController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.DashboardSystemController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.DashboardController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.MenuController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuController.GetTestData(EDIWEBAPI.Enums.SystemEnums.DayOfWeekMN)">
+            <summary>
+            API to get all values
+            </summary>
+            <remarks>
+            This API will get all values
+            </remarks>
+            <returns>All values</returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuController.Get(System.Int32)">
+            <summary>
+            Цор ганц меню буцаана
+            </summary>
+            <remarks>
+            This API will get all values
+            </remarks>
+            <returns>All values</returns>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuController.AddMenuRoles(System.Int32)">
+            <summary>
+            Role -д хамааралтай цэсүүд дээр нэмж болох цэсийн жагсаалт  
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2017.11.30 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.Get(System.Int32)">
+            <summary>
+            #
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="item"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.GetUserRoles">
+            <summary>
+            #Системд нэвтэрсэн хэрэглэгчийн 
+            Role-д хамаарах цэсийг буцаагдаг функц
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="item"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.GetRoles(EDIWEBAPI.Entities.FilterViews.MenuRoleFilterView)">
+            <summary>
+            #Хандах эрхийн мэдээллийг филтертэй авчрана
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2018-1-26
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.GetOrganizationRoles">
+            <summary>
+            #Нэвтэрсэн хэрэглэгчийн байгууллагын Role
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-15
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.Put(EDIWEBAPI.Entities.DBModel.SystemManagement.SYSTEM_ROLES)">
+            <summary>
+            #SYSTEM_MENU_ROLE ХҮСНЭГТИЙН POST
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="item"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.Put(EDIWEBAPI.Entities.DBModel.SystemManagement.SYSTEM_MENU_ROLE)">
+            <summary>
+            #SYSTEM_MENU_ROLE ХҮСНЭГТИЙН PUT 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-20
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.GetOrganizationsWithRoles(EDIWEBAPI.Entities.FilterViews.OganizationWithRolesFilterView)">
+            <summary>
+            Role жагсаалтыг байгууллагаар нь нэгтгэж харуулах api 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2017.11.30 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.GetMenusByOrganizationType(System.Int32)">
+            <summary>
+            Role -н Menu жагсаалтыг  харуулах api 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2017.12.05 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.GetMenusByRoleId(System.Int64)">
+            <summary>
+            Байгууллагын Menu жагсаалтыг  харуулах api 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2017.1.30 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.SaveRole(EDIWEBAPI.Entities.DBModel.SystemManagement.SYSTEM_ORGANIZATION_ROLES)">
+            <summary>
+            Хандах эрхийн нэрийг хадгалах api 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2017.12.07 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.RemoveMenuRole(System.Int32,System.Int32)">
+            <summary>
+            Хандах эрхийн цэсний жагсаалтаас цэс устгах api 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2017.12.07 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.MenuRoleController.AddRoleMenus(System.Collections.Generic.List{System.Int32},System.Int32)">
+            <summary>
+            Хандах эрхийн цэсүүдийг нэмэх api 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2017.12.07 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.ServiceUtilsController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.ServiceUtilsController})">
+            <summary>
+            
+            </summary>  
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.#ctor(EDIWEBAPI.Context.OracleDbContext,Microsoft.Extensions.Logging.ILogger{EDIWEBAPI.Controllers.SysManagement.UserController})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.Get">
+            <summary>
+            #Хэрэглэгчийн хувийн мэдээлэл
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-22
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.GetAllUsers">
+            <summary>
+            Идэвхитэй хэрэглэгчдийн жагсаалт шүүлтүүртэй хуудаслалтай 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : Л.Идэр
+            Үүсгэсэн огноо : 2017.11.10 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.GetOrganizationUsers(System.Int32)">
+            <summary>
+            Байгууллагын хэрэглэгчийн жагсаалт идэвхитэй 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 
+            Зассан огноо : 
+            </remarks>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+               
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.GetAllDiabledUsers">
+            <summary>
+            Байгууллагын хэрэглэгчийн жагсаалт идэвхигүй 
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 
+            Зассан огноо : 
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.Post(EDIWEBAPI.Entities.CustomModels.UserDto)">
+            <summary>
+            Байгууллагын хэрэглэгч бүртгэх
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-02
+            Зассан огноо : 
+            </remarks>
+            <param name="param"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.UpdateUserProfile(EDIWEBAPI.Entities.DBModel.SystemManagement.SYSTEM_USERS)">
+            <summary>
+            Хэрэглэгч мэдээлэлээ засах
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 
+            Зассан огноо : 
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+            
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.Put(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            #Хэрэглэгчийн мэдээлэл засах
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : DateTimes
+            </remarks>
+            <param name="item"></param>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.Delete(System.Int32)">
+            <summary>
+            #Хэрэглэгч идэвхигүй болгох
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2017-11-01
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.PostCreateUser(EDIWEBAPI.Entities.DBModel.SystemManagement.SYSTEM_USERS)">
+            <summary>
+            #Тухайн нэвтэрсэн компанийн хэрэглэгч бүртгэх апи   
+            </summary>
+            <remarks>
+            Тайлбар
+            Програмист : М.Давхарбаяр
+            Үүсгэсэн огноо : 2018-05-15
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.SearchOrganization(System.String,System.String)">
+            <summary>
+            #Байгууллага регистерийн дугаараар хайх
+            </summary>
+            <remarks>
+            Тайлбар
+            Үүсгэсэн огноо : 2018-10-23
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Ажилттай биелэсэн</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="M:EDIWEBAPI.Controllers.SysManagement.UserController.SearchUser(System.String,System.String)">
+            <summary>
+            #Хэрэглэгч имэйлээр хайх
+            </summary>
+            <remarks>
+            Тайлбар
+            Үүсгэсэн огноо : 2019-02-14
+            </remarks>
+            <returns>буцаах утга</returns>
+            <response code="ResponceClient = true">Амжилттай</response>
+            <response code="ResponceClient = false">Амжилтгүй</response>
+        </member>
+        <member name="P:EDIWEBAPI.Entities.DBModel.Order.ReciveOrder.RegNo">
+            <summary>
+            БАЙГУУЛЛАГЫН РЕГИСТЕР
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.Entities.DBModel.Order.ReciveOrder.Name">
+            <summary>
+            БАЙГУУЛЛАГЫН НЭР
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.Entities.DBModel.Order.ReciveOrder.SendMail">
+            <summary>
+            Илгээх имейл хаяг
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.Entities.DBModel.Order.ReciveOrder.SMSMobile">
+            <summary>
+            Мессеж илгээх дугаар
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.Entities.DBModel.Order.RetOrder.SendMail">
+            <summary>
+            Илгээх имейл хаяг
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.Entities.DBModel.Order.RetOrder.SMSMobile">
+            <summary>
+            Мессеж илгээх дугаар
+            </summary>
+        </member>
+        <member name="T:EDIWEBAPI.Entities.License.SYSTEM_LICENSE_FUNCTION">
+            <summary>
+            Системийн үнэ функцуудын бүртгэл
+            </summary>
+        </member>
+        <member name="T:EDIWEBAPI.Entities.License.SYSTEM_LICENSE_PACKAGE">
+            <summary>
+            Системийн лицензийн багцын бүртгэл
+            </summary>
+        </member>
+        <member name="T:EDIWEBAPI.SystemResource.MailResource">
+            <summary>
+               A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.ResourceManager">
+            <summary>
+               Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.Culture">
+            <summary>
+               Overrides the current thread's CurrentUICulture property for all
+               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.BrochureTemplate">
+             <summary>
+                Looks up a localized string similar to  &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+            &lt;html&gt;
+              &lt;head&gt;   
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style type=&quot;text/css&quot;&gt;
+                  
+                  /* Default CSS */
+                  body,#body_style {margin: 0; padding: 0; background: #f1f1f1; color: #5b656e;}
+                  a {color: #09c;}
+                  a img {border: none [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.BrochureTemplate2">
+             <summary>
+                Looks up a localized string similar to  &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+            &lt;html
+            	xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+            	xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot;
+            	xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot;&gt;
+            	&lt;head&gt;
+            		&lt;title&gt;Бизнес өртөө&lt;/title&gt;
+            		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+            		&lt;meta name=&quot;x-apple-disable-message-reformatting&quot; /&gt;
+            		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+            		&lt;s [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.ForgetPass">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Нууц үг сэргээх&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-fa [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.ICalendar">
+             <summary>
+                Looks up a localized string similar to  BEGIN:VCALENDAR
+            PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+            VERSION:2.0
+            METHOD:REQUEST
+            X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+            BEGIN:VTIMEZONE
+            TZID:Ulaanbaatar Standard Time
+            BEGIN:STANDARD
+            DTSTART:{Dates}
+            RRULE:FREQ=YEARLY;BYDAY=-1FR;BYMONTH=9
+            TZOFFSETFROM:+0900
+            TZOFFSETTO:+0800
+            END:STANDARD
+            BEGIN:DAYLIGHT
+            DTSTART:16010331T020000
+            RRULE:FREQ=YEARLY;BYDAY=-1SA;BYMONTH=3
+            TZOFFSETFROM:+0800
+            TZOFFSETTO:+0900
+            END:DAYLIGHT
+            END:VTIMEZONE
+            BEGIN:VEVENT
+            ATTENDEE;CN={MailTo};RSVP=TRUE:{MailT [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.LicenseRequest">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;&lt;title&gt;Бизнес өртөө&lt;/title&gt;&lt;style&gt;
+            		  /* -------------------------------------
+            			  GLOBAL RESETS
+            		  ------------------------------------- */
+            		  img {
+            			border: none;
+            			-ms-interpolation-mode: bicubic;
+            			max-width: 100%; }
+            
+            		  body {
+            			background-color: #f6f6f6;
+            			font-family: sans-serif;
+            			-webkit-font-smoothing: antialiased;
+            			font-siz [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.MassMail">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.MassMail1">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.MasterConfirm">
+             <summary>
+                Looks up a localized string similar to  &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;it&quot;&gt;&lt;head&gt;
+            &lt;title&gt;Urto&lt;/title&gt;
+            &lt;!--
+            
+            
+            COLORE INTENSE  #9C010F
+            COLORE LIGHT #EDE8DA
+            
+            TESTO LIGHT #3F3D33
+            TESTO INTENSE #ffffff
+            
+            
+             --&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+            
+            &lt;style type=&quot;text/css&quot;&gt;
+            $red: #e74c3c;
+            
+                  #ko_onecolumnBlock_4 .textintenseStyle a, #ko_onecolumnBlock_4 .textintenseStyle a:link, #ko_onecolumnBlock_4 .textintenseStyle a:visited, #ko_onecolumnBlock_4 .textintenseStyle a:hover{
+                    color: #fffff [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.MasterNote">
+             <summary>
+                Looks up a localized string similar to  &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;it&quot;&gt;&lt;head&gt;
+            &lt;title&gt;Urto&lt;/title&gt;
+            &lt;!--
+            
+            
+            COLORE INTENSE  #9C010F
+            COLORE LIGHT #EDE8DA
+            
+            TESTO LIGHT #3F3D33
+            TESTO INTENSE #ffffff
+            
+            
+             --&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+            
+            &lt;style type=&quot;text/css&quot;&gt;
+            $red: #e74c3c;
+            
+                  #ko_onecolumnBlock_4 .textintenseStyle a, #ko_onecolumnBlock_4 .textintenseStyle a:link, #ko_onecolumnBlock_4 .textintenseStyle a:visited, #ko_onecolumnBlock_4 .textintenseStyle a:hover{
+                    color: #fffff [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.MasterRequest">
+             <summary>
+                Looks up a localized string similar to  &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;it&quot;&gt;&lt;head&gt;
+            &lt;title&gt;Urto&lt;/title&gt;
+            &lt;!--
+            
+            
+            COLORE INTENSE  #9C010F
+            COLORE LIGHT #EDE8DA
+            
+            TESTO LIGHT #3F3D33
+            TESTO INTENSE #ffffff
+            
+            
+             --&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+            
+            &lt;style type=&quot;text/css&quot;&gt;
+            $red: #e74c3c;
+            
+                  #ko_onecolumnBlock_4 .textintenseStyle a, #ko_onecolumnBlock_4 .textintenseStyle a:link, #ko_onecolumnBlock_4 .textintenseStyle a:visited, #ko_onecolumnBlock_4 .textintenseStyle a:hover{
+                    color: #fffff [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.MasterStatus">
+             <summary>
+                Looks up a localized string similar to  &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;it&quot;&gt;&lt;head&gt;
+            &lt;title&gt;Urto&lt;/title&gt;
+            &lt;!--
+            
+            
+            COLORE INTENSE  #9C010F
+            COLORE LIGHT #EDE8DA
+            
+            TESTO LIGHT #3F3D33
+            TESTO INTENSE #ffffff
+            
+            
+             --&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+            
+            &lt;style type=&quot;text/css&quot;&gt;
+            $red: #e74c3c;
+            
+                  #ko_onecolumnBlock_4 .textintenseStyle a, #ko_onecolumnBlock_4 .textintenseStyle a:link, #ko_onecolumnBlock_4 .textintenseStyle a:visited, #ko_onecolumnBlock_4 .textintenseStyle a:hover{
+                    color: #fffff [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.NewDevice">
+             <summary>
+                Looks up a localized string similar to  &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;it&quot;&gt;&lt;head&gt;
+            &lt;title&gt;Urto&lt;/title&gt;
+            &lt;!--
+            
+            
+            COLORE INTENSE  #9C010F
+            COLORE LIGHT #EDE8DA
+            
+            TESTO LIGHT #3F3D33
+            TESTO INTENSE #ffffff
+            
+            
+             --&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+            
+            &lt;style type=&quot;text/css&quot;&gt;
+            $red: #e74c3c;
+            
+                  #ko_onecolumnBlock_4 .textintenseStyle a, #ko_onecolumnBlock_4 .textintenseStyle a:link, #ko_onecolumnBlock_4 .textintenseStyle a:visited, #ko_onecolumnBlock_4 .textintenseStyle a:hover{
+                    color: #fffff [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.NewUserGuide">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.NewUserTemplate">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.OrderTemplate">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.PaymentCancelTemplate">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.PaymentMassTemplate">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.PaymentTemplate">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.SampleEmailTemplate">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MailResource.Production1">
+             <summary>
+                Looks up a localized string similar to  &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+                &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+                &lt;title&gt;Бизнес өртөө&lt;/title&gt;
+                &lt;style&gt;
+                  /* -------------------------------------
+                      GLOBAL RESETS
+                  ------------------------------------- */
+                  img {
+                    border: none;
+                    -ms-interpolation-mode: bicubic;
+                    max-width: 100%; }
+            
+                  body {
+                    background-color: #f6f6f6;
+                    font-famil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="T:EDIWEBAPI.SystemResource.MessageResource">
+            <summary>
+               A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MessageResource.ResourceManager">
+            <summary>
+               Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MessageResource.Culture">
+            <summary>
+               Overrides the current thread's CurrentUICulture property for all
+               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MessageResource.OrderMessage">
+             <summary>
+                Looks up a localized string similar to #orderdate udriin #storename hypermarket zahialga ilgeelee. #shorturl
+             Zahialgiin huudas deerh baraa bolon uniig shalgana uu?
+            .
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MessageResource.ReturnOrderMessage">
+             <summary>
+                Looks up a localized string similar to #orderdate udriin #storename hypermarket butsaaltiin medeelliig ilgeelee. #shorturl
+            Butsaaltiig zaasan hugatsaanii dotor avahiig husye?.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MessageResource.ReturnOrderMessage2">
+             <summary>
+                Looks up a localized string similar to tanai companii butsaalt ni #storename hypermarketiin ustgah baraanii jagsaaltad orson tul yaraltai butsaan avna uu!
+            #shorturl.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.SystemResource.MessageResource.ReturnOrderMessage3">
+             <summary>
+                Looks up a localized string similar to Tanai companaas #storename hypermarket-d niiluuldeg daraah baraag gereend zaagdsan E-4 zaaltiin daguu ustgasan bolno.
+            #shorturl.
+             </summary>
+        </member>
+        <member name="P:EDIWEBAPI.Utils.JwtIssuerOptions.Issuer">
+            <summary>
+            "iss" (Issuer) Claim
+            </summary>
+            <remarks>The "iss" (issuer) claim identifies the principal that issued the
+              JWT.  The processing of this claim is generally application specific.
+              The "iss" value is a case-sensitive string containing a StringOrURI
+              value.  Use of this claim is OPTIONAL.</remarks>
+        </member>
+        <member name="P:EDIWEBAPI.Utils.JwtIssuerOptions.Subject">
+            <summary>
+            "sub" (Subject) Claim
+            </summary>
+            <remarks> The "sub" (subject) claim identifies the principal that is the
+              subject of the JWT.  The claims in a JWT are normally statements
+              about the subject.  The subject value MUST either be scoped to be
+              locally unique in the context of the issuer or be globally unique.
+              The processing of this claim is generally application specific.  The
+              "sub" value is a case-sensitive string containing a StringOrURI
+              value.  Use of this claim is OPTIONAL.</remarks>
+        </member>
+        <member name="P:EDIWEBAPI.Utils.JwtIssuerOptions.Audience">
+            <summary>
+            "aud" (Audience) Claim
+            </summary>
+            <remarks>The "aud" (audience) claim identifies the recipients that the JWT is
+              intended for.  Each principal intended to process the JWT MUST
+              identify itself with a value in the audience claim.  If the principal
+              processing the claim does not identify itself with a value in the
+              "aud" claim when this claim is present, then the JWT MUST be
+              rejected.  In the general case, the "aud" value is an array of case-
+              sensitive strings, each containing a StringOrURI value.  In the
+              special case when the JWT has one audience, the "aud" value MAY be a
+              single case-sensitive string containing a StringOrURI value.  The
+              interpretation of audience values is generally application specific.
+              Use of this claim is OPTIONAL.</remarks>
+        </member>
+        <member name="P:EDIWEBAPI.Utils.JwtIssuerOptions.NotBefore">
+            <summary>
+            "nbf" (Not Before) Claim (default is UTC NOW)
+            </summary>
+            <remarks>The "nbf" (not before) claim identifies the time before which the JWT
+              MUST NOT be accepted for processing.  The processing of the "nbf"
+              claim requires that the current date/time MUST be after or equal to
+              the not-before date/time listed in the "nbf" claim.  Implementers MAY
+              provide for some small leeway, usually no more than a few minutes, to
+              account for clock skew.  Its value MUST be a number containing a
+              NumericDate value.  Use of this claim is OPTIONAL.</remarks>
+        </member>
+        <member name="P:EDIWEBAPI.Utils.JwtIssuerOptions.IssuedAt">
+            <summary>
+            "iat" (Issued At) Claim (default is UTC NOW)
+            </summary>
+            <remarks>The "iat" (issued at) claim identifies the time at which the JWT was
+              issued.  This claim can be used to determine the age of the JWT.  Its
+              value MUST be a number containing a NumericDate value.  Use of this
+              claim is OPTIONAL.</remarks>
+        </member>
+        <member name="P:EDIWEBAPI.Utils.JwtIssuerOptions.ValidFor">
+            <summary>
+            Set the timespan the token will be valid for (default is 5 min/300 seconds)
+            </summary>
+        </member>
+        <member name="P:EDIWEBAPI.Utils.JwtIssuerOptions.Expiration">
+            <summary>
+            "exp" (Expiration Time) Claim (returns IssuedAt + ValidFor)
+            </summary>
+            <remarks>The "exp" (expiration time) claim identifies the expiration time on
+              or after which the JWT MUST NOT be accepted for processing.  The
+              processing of the "exp" claim requires that the current date/time
+              MUST be before the expiration date/time listed in the "exp" claim.
+              Implementers MAY provide for some small leeway, usually no more than
+              a few minutes, to account for clock skew.  Its value MUST be a number
+              containing a NumericDate value.  Use of this claim is OPTIONAL.</remarks>
+        </member>
+        <member name="P:EDIWEBAPI.Utils.JwtIssuerOptions.JtiGenerator">
+            <summary>
+            "jti" (JWT ID) Claim (default ID is a GUID)
+            </summary>
+            <remarks>The "jti" (JWT ID) claim provides a unique identifier for the JWT.
+              The identifier value MUST be assigned in a manner that ensures that
+              there is a negligible probability that the same value will be
+              accidentally assigned to a different data object; if the application
+              uses multiple issuers, collisions MUST be prevented among values
+              produced by different issuers as well.  The "jti" claim can be used
+              to prevent the JWT from being replayed.  The "jti" value is a case-
+              sensitive string.  Use of this claim is OPTIONAL.</remarks>
+        </member>
+        <member name="P:EDIWEBAPI.Utils.JwtIssuerOptions.SigningCredentials">
+            <summary>
+            The signing key to use when generating tokens.
+            </summary>
+        </member>
+        <member name="M:EDIWEBAPI.Utils.ReturnResponce.GetExceptionResponce(System.Exception,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

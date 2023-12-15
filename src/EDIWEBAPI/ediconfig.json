@@ -1,0 +1,12 @@
+﻿{
+  "FileServerURL": "http://www.urto.mn:8090/",
+  "StorePaymentMail": "khosbayarulziibaatar@gmail.com",
+  "ResetPasswordMail": "khosbayarulziibaatar@gmail.com",
+  "MessageServiceURL": "http://10.0.0.14:8011/",
+  "MessageRecive": "91118340",
+  "ShortURL": "http://urto.mn/#/n/",
+  "HostDevelopmentMode": false,
+  "NotifcationServerAddress": "http://test.notif.urto.mn",
+  "DisableDeviceURL": "http://test.urto.mn/#/register/device/&id=#id&email=#email&method=#method",
+  "EditCompanyURL": "http://test.urto.mn/#/editCompany/&id=#id&email=#email"
+}
