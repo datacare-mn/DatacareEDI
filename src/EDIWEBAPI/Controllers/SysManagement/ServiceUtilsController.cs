@@ -555,24 +555,21 @@ namespace EDIWEBAPI.Controllers.SysManagement
         }
 
 
-        [HttpGet]
-        [Route("messagearchive/{sdate}/{edate}/{issent}")]
+        [HttpPost]
+        [Route("messagearchive")]
         [Authorize]
-        public async Task<ResponseClient> GetMessage(DateTime sdate, DateTime edate, int issent)
+        public async Task<ResponseClient> GetMessage([FromBody] MessageArchive body)
         {
             var orgType = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, UserProperties.OrgType));
             if (orgType == 1)
                 return ReturnResponce.AccessDeniedResponce();
 
             var comid = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, UserProperties.CompanyId));
-            var response = Logics.MailLogic.GetSmsLogs(_dbContext, sdate, edate.AddDays(1).AddSeconds(-1),
-                orgType == 2 ? comid : 0, issent);
+            var response = Logics.MailLogic.GetSmsLogs(_dbContext, body.sdate, body.edate.AddDays(1).AddSeconds(-1),
+                orgType == 2 ? comid : 0, body.issent, body.phoneNo);
 
             return ReturnResponce.ListReturnResponce(response);
         }
-
-
-
 
 
         [HttpGet]

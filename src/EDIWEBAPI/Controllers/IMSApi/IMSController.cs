@@ -12,7 +12,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net.NetworkInformation;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static EDIWEBAPI.Enums.SystemEnums;
 
@@ -438,6 +440,7 @@ namespace EDIWEBAPI.Controllers.IMSApi
                 //{
                 //    list.Add(contractno);
                 //}
+
                 if (!String.IsNullOrEmpty(contractno))
                 {
                     list.Add(contractno);
@@ -455,6 +458,36 @@ namespace EDIWEBAPI.Controllers.IMSApi
                 return ReturnResponce.GetExceptionResponce(ex);
             }
         }
+
+
+
+        [HttpGet]
+        [Authorize]
+        [Route("product/listbycontract")]
+        public async Task<ResponseClient> ProductListByContract([FromQuery] string contractno)
+        {
+            try
+            {
+                var list = new List<string>();
+
+                if (!String.IsNullOrEmpty(contractno))
+                {
+                    list.Add(contractno);
+                }
+                IMSUtils restUtils = new IMSUtils(_dbContext);
+                if (restUtils.StoreServerConnected)
+                {
+                    return restUtils.Post($"/api/product/listbycontract", JsonConvert.SerializeObject(new { data = list})).Result;
+                }
+                return ReturnResponce.FailedRemoteServerNotConnectedResponce("No connected server");
+            }
+            catch (Exception ex)
+            {
+                MethodBase methodBase = MethodBase.GetCurrentMethod();
+                return ReturnResponce.GetExceptionResponce(ex);
+            }
+        }
+
         public class ClassDep
         {
             public string jumcd { get; set; }

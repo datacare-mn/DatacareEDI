@@ -35,8 +35,9 @@ namespace EDIWEBAPI.Entities.DBModel.SystemManagement
         public int? ENABLED { get; set; }
         public int? PARENTID { get; set; }
         public string PARENTREGNO { get; set; }
+        public int ISFOREIGN { get; set; }
 
-      //  public List<MST_CONTRACT> Contract { get; set; }
+        //  public List<MST_CONTRACT> Contract { get; set; }
 
     }
 }

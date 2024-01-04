@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using EDIWEBAPI.Attributes;
 using EDIWEBAPI.Enums;
+using static EDIWEBAPI.Enums.SystemEnums;
 
 namespace EDIWEBAPI.Controllers.SysManagement
 {
@@ -79,6 +80,22 @@ namespace EDIWEBAPI.Controllers.SysManagement
             return Logics.ContractLogic.Modify(_dbContext, _log, UsefulHelpers.STORE_ID, regno);
         }
 
+        [HttpGet]
+        [Authorize]
+        [Route("contracts")]
+        [ServiceFilter(typeof(LogFilter))]
+        public async Task<ResponseClient> Contracts()
+        {
+            var orgId = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, Enums.SystemEnums.UserProperties.CompanyId));
 
+            if (!ModelState.IsValid)
+                return ReturnResponce.ModelIsNotValudResponce();
+
+            var contracts = _dbContext.GET_CONTRACTS_ORG_ID(orgId);
+
+            return contracts != null ?
+                ReturnResponce.ListReturnResponce(contracts) :
+                ReturnResponce.NotFoundResponce();
+        }
     }
 }

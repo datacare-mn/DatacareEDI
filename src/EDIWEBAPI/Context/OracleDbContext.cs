@@ -1015,7 +1015,16 @@ namespace EDIWEBAPI.Context
                         select c).ToList();
             }
             return null;
-      }
+        }
+
+        //Get contracts by organization id
+        public virtual List<MST_CONTRACT> GET_CONTRACTS_ORG_ID(int orgId)
+        {
+            return (from c in MST_CONTRACT
+                    where c.BUSINESSID == orgId
+                    select c).ToList();
+           
+        }
 
         //Add s by organization id
         public virtual int ADD_USER_CONTRACTS(int[] contractIds, int uId)

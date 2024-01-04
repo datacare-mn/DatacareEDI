@@ -79,21 +79,24 @@ namespace EDIWEBAPI.Logics
             return _context.SYSTEM_MAIL_LOG.FirstOrDefault(x => x.ID == id);
         }
 
-        public static List<SYSTEM_MAIL_LOG> GetMailLogs(OracleDbContext _context, DateTime beginDate, DateTime endDate, int storeId, int isSent)
+        public static List<SYSTEM_MAIL_LOG> GetMailLogs(OracleDbContext _context, DateTime beginDate, DateTime endDate, int storeId, int isSent, string mail)
         {
             return (from m in _context.SYSTEM_MAIL_LOG
-                 where m.REQUESTDATE >= beginDate && m.REQUESTDATE <= endDate //(storeId == 0 || m.STOREID == storeId)
-                    && (isSent == -1 || m.ISSEND == isSent)
-                    orderby m.REQUESTDATE
-                 select m).ToList();
+                    where m.REQUESTDATE >= beginDate 
+                        && m.REQUESTDATE <= endDate //(storeId == 0 || m.STOREID == storeId)
+                        && (isSent == -1 || m.ISSEND == isSent) 
+                        && (mail == null || m.MAIL == mail)
+                        orderby m.REQUESTDATE
+                    select m).ToList();
         }
 
         public static List<SYSTEM_MESSAGE_ARCHIVE> GetSmsLogs(OracleDbContext _context, DateTime beginDate, DateTime endDate, 
-            int storeId, int issent)
+            int storeId, int issent, string phoneNo)
         {
             return (from m in _context.SYSTEM_MESSAGE_ARCHIVE
                 where m.REQUESTDATE >= beginDate && m.REQUESTDATE <= endDate //(storeId == 0 || m.STOREID == storeId)
                     && (issent == -1 || m.ISSENT == issent)
+                    && (phoneNo == null || m.PHONENUMBER == phoneNo)
                 orderby m.REQUESTDATE
                 select m).ToList();
         }

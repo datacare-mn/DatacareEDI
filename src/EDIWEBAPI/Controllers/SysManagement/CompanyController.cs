@@ -78,6 +78,7 @@ namespace EDIWEBAPI.Controllers.SysManagement
                     email = currentcompany.EMAIL,
                     address = currentcompany.ADDRESS,
                     longtidue = currentcompany.LONGITUDE,
+                    isforeign = currentcompany.ISFOREIGN,
                     lattitude = currentcompany.LATITUDE,
                     logo = currentcompany.LOGO,
                     parentOrgRegistrationNumber = parentCompany != null ? parentCompany.REGNO : string.Empty,
@@ -331,6 +332,7 @@ namespace EDIWEBAPI.Controllers.SysManagement
                     SLOGAN = param.SLOGAN,
                     LOGO = param.LOGO,
                     ORGTYPE = param.ORGTYPE,
+                    ISFOREIGN = param.ISFOREIGN,
                     ENABLED = 1,
                     PARENTID = param.PARENTID
                 };
@@ -392,6 +394,7 @@ namespace EDIWEBAPI.Controllers.SysManagement
                 currentdata.SLOGAN = param.SLOGAN;
                 currentdata.LOGO = param.LOGO;
                 currentdata.ORGTYPE = param.ORGTYPE;
+                currentdata.ISFOREIGN = param.ISFOREIGN;
                 currentdata.ENABLED = param.ENABLED;
                 currentdata.PARENTID = param.PARENTID;
 
@@ -840,8 +843,8 @@ namespace EDIWEBAPI.Controllers.SysManagement
         /// </summary>
         /// <remarks>
         /// Тайлбар
-        /// Програмист : М.Давхарбаяр
-        /// Үүсгэсэн огноо : 2017-11-24
+        /// Програмист : Цогийнлоовон
+        /// Үүсгэсэн огноо : 2023-01-03
         /// </remarks>
         /// <returns>буцаах утга</returns>
         /// <response code="ResponceClient = true">Ажилттай биелэсэн</response>
@@ -851,8 +854,8 @@ namespace EDIWEBAPI.Controllers.SysManagement
         [Authorize(Policy = "BizApiUser")]
         public ResponseClient Contracts()
         {
-            int comid = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, SystemEnums.UserProperties.CompanyId));
-            var currentdata = Logics.ContractLogic.GetContracts(_dbContext, _log, comid);
+            int companyId = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, SystemEnums.UserProperties.CompanyId));
+            var currentdata = Logics.ContractLogic.GetContracts(_dbContext, _log, companyId);
 
             return currentdata == null ?
                 ReturnResponce.NotFoundResponce() :

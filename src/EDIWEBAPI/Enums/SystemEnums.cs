@@ -104,6 +104,13 @@ namespace EDIWEBAPI.Enums
         }
 
         [JsonConverter(typeof(StringEnumConverter))]
+        public enum ISFOREIGN
+        {
+            Импорт = 1,
+            Дотоод = 0
+        }
+
+        [JsonConverter(typeof(StringEnumConverter))]
         public enum ORGTYPE
         {
             Бизнес = 1,
@@ -133,7 +140,8 @@ namespace EDIWEBAPI.Enums
             IsHeaderCompanyUser,
             CompanyName,
             Roleid,
-            Isagreement
+            Isagreement,
+            IsForeign
         }
 
         [JsonConverter(typeof(StringEnumConverter))]

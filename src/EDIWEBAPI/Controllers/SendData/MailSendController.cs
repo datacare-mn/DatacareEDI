@@ -475,10 +475,11 @@ namespace EDIWEBAPI.Controllers.SendData
 
 
         #region MailArchive
-        [HttpGet]
-        [Route("getmailhistory/{sdate}/{edate}/{issent}")]
+        [HttpPost]
+        [Route("getmailhistory")]
         [Authorize]
-        public async Task<ResponseClient> GetMailHistory(DateTime sdate, DateTime edate, int issent)
+
+        public async Task<ResponseClient> GetMailHistory([FromBody] MailHistory body)
         {
             var orgType = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, UserProperties.OrgType));
             if (orgType == (int)ORGTYPE.Бизнес)
@@ -486,7 +487,7 @@ namespace EDIWEBAPI.Controllers.SendData
             try
             {
                 var comid = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, UserProperties.CompanyId));
-                var response = Logics.MailLogic.GetMailLogs(_dbContext, sdate, edate.AddDays(1), orgType == 2 ? comid : 0, issent);
+                var response = Logics.MailLogic.GetMailLogs(_dbContext, body.sdate, body.edate.AddDays(1), orgType == 2 ? comid : 0, body.issent, body.mail);
                 return ReturnResponce.ListReturnResponce(response);
             }
             catch (Exception ex)

@@ -43,6 +43,7 @@ namespace EDIWEBAPI.Entities.CustomModels
         public int? PARENTID { get; set; }
 
         public string PARENTREGNO { get; set; }
+        public int ISFOREIGN { get; set; }
 
           public    List<SYSTEM_ORGANIZATION> CHIDLCOMPANYS { get; set; }
     }

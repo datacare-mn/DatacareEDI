@@ -66,13 +66,30 @@ namespace EDIWEBAPI.Controllers.SysManagement
         {
             var userid = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, Enums.SystemEnums.UserProperties.UserId));
             var orgtype = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, Enums.SystemEnums.UserProperties.OrgType));
+            var isforeign = Convert.ToInt32(UsefulHelpers.GetIdendityValue(HttpContext, Enums.SystemEnums.UserProperties.IsForeign));
+
             try
             {
                 var allMenus = new List<SYSTEM_NEW_MENU>();
                 var menus = new List<MenuDto>();
                 var showParent = true;
 
-                if ((ORGTYPE)orgtype == ORGTYPE.Бизнес)
+                if((ISFOREIGN)isforeign == ISFOREIGN.Импорт) 
+                {
+                    //var row = new SYSTEM_NEW_MENU();
+                    //row.TITLE = "Item List";
+                    //row.ID = 6011;
+                    //row.PARENTID = null;
+                    //row.ROUTE = "/master/itemlist";
+                    //allMenus.Add(row);
+
+                    allMenus = (from m in _dbContext.SYSTEM_NEW_MENU
+                                where m.ID == 6011
+                                orderby m.SORTEDORDER
+                                select m).ToList();
+
+                }
+                else if ((ORGTYPE)orgtype == ORGTYPE.Бизнес)
                 {
                     allMenus = (from m in _dbContext.SYSTEM_NEW_MENU
                                 where m.BUSINESS == 1 && m.ENABLED == 1

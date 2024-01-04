@@ -442,6 +442,7 @@ namespace EDIWEBAPI.Controllers
                 userCompany.REGNO,
                 userCompany.LOGO,
                 userCompany.ID,
+                userCompany.ISFOREIGN,
                 currentUser.ENABLED,
                 currentUser.PHONE,
                 currentUser.LASTNAME,
@@ -484,7 +485,7 @@ namespace EDIWEBAPI.Controllers
                 if (usertype == SystemUserTypes.Business)
                 {
                     string encrypteddata = EncryptionUtils.Encrypt(
-                        GenericString(user.USERMAIL, user.ID, user.ORGID, organization.REGNO, 1, isHeaderCompanyUser, organization.COMPANYNAME, user.ROLEID, user.ISAGREEMENT),
+                        GenericString(user.USERMAIL, user.ID, user.ORGID, organization.REGNO, 1, isHeaderCompanyUser, organization.COMPANYNAME, user.ROLEID, user.ISAGREEMENT,organization.ISFOREIGN),
                         EncryptionUtils.ENCRYPTION_KEY);
 
                     return Task.FromResult(new ClaimsIdentity(
@@ -497,7 +498,7 @@ namespace EDIWEBAPI.Controllers
                 else if (usertype == SystemUserTypes.Store)
                 {
                     string encrypteddata = EncryptionUtils.Encrypt(
-                        GenericString(user.USERMAIL, user.ID, user.ORGID, organization.REGNO, 2, isHeaderCompanyUser, organization.COMPANYNAME, user.ROLEID, null),
+                        GenericString(user.USERMAIL, user.ID, user.ORGID, organization.REGNO, 2, isHeaderCompanyUser, organization.COMPANYNAME, user.ROLEID, null, organization.ISFOREIGN),
                         EncryptionUtils.ENCRYPTION_KEY);
 
                     return Task.FromResult(new ClaimsIdentity(
@@ -510,7 +511,7 @@ namespace EDIWEBAPI.Controllers
                 else
                 {
                     string encrypteddata = EncryptionUtils.Encrypt(
-                        GenericString(user.USERMAIL, user.ID, user.ORGID, organization.REGNO, 3, isHeaderCompanyUser, organization.COMPANYNAME, user.ROLEID, null),
+                        GenericString(user.USERMAIL, user.ID, user.ORGID, organization.REGNO, 3, isHeaderCompanyUser, organization.COMPANYNAME, user.ROLEID, null, organization.ISFOREIGN),
                         EncryptionUtils.ENCRYPTION_KEY);
 
                     return Task.FromResult(new ClaimsIdentity(
@@ -551,11 +552,11 @@ namespace EDIWEBAPI.Controllers
         }
 
 
-        string GenericString(string usermail, decimal userid, decimal companyid, string companyregno, int orgtype, bool isHeaderCompanyUser, string companyName, int? roleid, int? agreement)
+        string GenericString(string usermail, decimal userid, decimal companyid, string companyregno, int orgtype, bool isHeaderCompanyUser, string companyName, int? roleid, int? agreement,int? isforeign)
         {
             List<GenericData> data = new List<GenericData>
             {
-                new GenericData  { UserMail = usermail,  UserId =Convert.ToInt32(userid), CompanyId = Convert.ToInt32(companyid), ComRegNo = companyregno, OrgType = Convert.ToInt32(orgtype), isHeaderCompanyUser = isHeaderCompanyUser, CompanyName  = companyName, Isagreement = agreement, Roleid = roleid}
+                new GenericData  { UserMail = usermail,  UserId =Convert.ToInt32(userid), CompanyId = Convert.ToInt32(companyid), ComRegNo = companyregno, OrgType = Convert.ToInt32(orgtype), isHeaderCompanyUser = isHeaderCompanyUser, CompanyName  = companyName, Isagreement = agreement, Roleid = roleid ,IsForeign = Convert.ToInt32(isforeign)}
             };
             return JsonConvert.SerializeObject(data);
 
