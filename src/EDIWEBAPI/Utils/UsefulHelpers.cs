@@ -258,6 +258,10 @@ namespace EDIWEBAPI.Utils
                 {
                     return request.Isagreement;
                 }
+                else if(userproperties == UserProperties.IsForeign)
+                {
+                    return request.IsForeign;
+                }
                 else
                 {
                     return request.UserMail;

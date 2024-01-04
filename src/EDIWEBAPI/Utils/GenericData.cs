@@ -24,7 +24,6 @@ namespace EDIWEBAPI.Utils
         public int? Isagreement { get; set; }
 
         public int?  Roleid { get; set; }
-
-
+        public int IsForeign { get; internal set; }
     }
 }
